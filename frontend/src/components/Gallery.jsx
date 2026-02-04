@@ -89,16 +89,16 @@ const Gallery = () => {
                         <div key={item.id}>
                             <div>
                                 {item.type === 'image' ? (
-                                    <img src={item.path} alt="" 
-                                    onClick={() => handleZoomIn(item.path, index)}
-                                    className='w-full h-auto rounded-lg object-cover cursor-pointer 
-                                    hover:shadow-2xl hover:opacity-90 hover:scale-110 transition duration-300 ease-in-out'/>
-                                ) : (
-                                    <video controls muted
-                                            className='w-full h-auto rounded-lg cursor-pointer 
-                                                        hover:shadow-2xl hover:opacity-90 hover:scale-110 transition duration-300 ease-in-out'>
-                                        <source src={item.path} type='video/mp4' />
-                                    </video>
+                                        <img src={item.path} alt=""
+                                            onClick={() => handleZoomIn(item.path, index)}
+                                            className='w-full h-[400px] object-cover rounded-lg cursor-pointer 
+                                            hover:shadow-2xl hover:opacity-90 hover:scale-105 transition duration-300 ease-in-out'/>
+                                    ) : (
+                                        <video controls muted
+                                            className='w-full h-[400px] object-cover rounded-lg cursor-pointer 
+                                            hover:shadow-2xl hover:opacity-90 hover:scale-105 transition duration-300 ease-in-out'>
+                                            <source src={item.path} type='video/mp4' />
+                                        </video>
                                 )}
                             </div>
                         </div>
@@ -117,20 +117,27 @@ const Gallery = () => {
                                 size={38}
                             />
                         </button>
-                        <button onClick={handlePreviousImage}
-                                className='absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-700 p-3 rounded-full hover:bg-gray-600 transition'>
-                            <FaArrowLeft
-                                color='white'
-                                size={32}
-                            />
-                        </button>
-                        <button onClick={handleNextImage}
-                        className='absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-700 p-3 rounded-full hover:bg-gray-600 transition'>
-                            <FaArrowRight
-                                color='white'
-                                size={32}
-                            />
-                        </button>
+                        <button 
+                                onClick={handlePreviousImage}
+                                disabled={imageIndex === 0}
+                                className={`absolute left-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full transition 
+                                    ${imageIndex === 0 ? 'bg-gray-400 cursor-not-allowed' : 'bg-gray-700 hover:bg-gray-600'}`}>
+                                <FaArrowLeft
+                                    color='white'
+                                    size={32}
+                                />
+                            </button>
+
+                            <button 
+                                onClick={handleNextImage}
+                                disabled={imageIndex === category.length - 1}
+                                className={`absolute right-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full transition 
+                                    ${imageIndex === category.length - 1 ? 'bg-gray-400 cursor-not-allowed' : 'bg-gray-700 hover:bg-gray-600'}`}>
+                                <FaArrowRight
+                                    color='white'
+                                    size={32}
+                                />
+                            </button>
                         
                     </div>
                 </div>

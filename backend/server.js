@@ -1,21 +1,10 @@
-const express = require('express');
-const nodemailer = require('nodemailer');
-const cors = require('cors');
+import app from "./app.js";
 
-const app = express()
-app.use(express.json());
-app.use(cors());
-
-require('dotenv').config()
-const port = process.env.PORT || 5000
-
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASSWORD
-    }
-})
+const PORT = process.env.PORT || 3000;
 
 
-app.listen(port , ()=> console.log('> Server is up and running on port : ' + port))
+
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});

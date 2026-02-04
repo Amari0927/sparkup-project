@@ -3,12 +3,12 @@ import ReviewCard from './ReviewCard';
 
 const Reviews = () => {
     return (
-        <div className='py-12 px-6  flex flex-col items-center bg-[#F9F9F9]'>
+        <div className='py-12 px-6  flex flex-col items-center bg-[#2C3E50]'>
             <div className='text-center mb-10'>
                 <h1 className='text-[#2ecc71] font-semibold uppercase text-lg tracking-wide'>
                     Testimonial
                 </h1>
-                <h2 className='text-3xl font-bold text-gray-700 md:text-4xl'>
+                <h2 className='text-3xl font-bold text-white md:text-4xl'>
                     What Clients Say
                 </h2>
             </div>

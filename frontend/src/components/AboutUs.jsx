@@ -41,7 +41,7 @@ const AboutUs = () => {
                     </div>
                     <div className="relative">
                         <img
-                        src="/src/assets/boss.jpeg"
+                        src="/src/assets/display-pic.jpeg"
                         alt="Spark Up Maintenance Team"
                         className="rounded-lg shadow-lg w-full object-cover h-[600px]"
                         />

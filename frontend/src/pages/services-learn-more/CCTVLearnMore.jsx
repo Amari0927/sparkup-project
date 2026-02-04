@@ -37,7 +37,7 @@ const CCTVLearnMore = () => {
                         <h2 className='text-2xl font-bold text-gray-700 md:text-3xl'>Professional CCTV Services</h2>
                         <p className='mt-4 text-gray-600 text-lg'>We provide high-quality CCTV installation services, ensuring your property remains secure with the latest surveillance technology.</p>
                     </section>
-                    <section className='mb-12'>
+                    <section className='mb-10'>
                     <h3 className='text-2xl font-semibold text-gray-700 mb-6'>Assessment and Consultation</h3>
                         <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
                             {assessmentSteps.map((item, index) => (
@@ -60,7 +60,7 @@ const CCTVLearnMore = () => {
                         </div>
                     </section>
                     <section>
-                        <h3 className='text-2xl font-semibold text-gray-700 mb-6'>Installation of CCTV Cameras</h3>
+                        <h3 className='text-2xl font-semibold text-gray-700 mb-6 mt-8'>Installation of CCTV Cameras</h3>
                         <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
                             {installationSteps.map((item, index) => (
                                 <div key={index} className='bg-gray-100 p-6 rounded-lg shadow-md'>

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import axios from 'axios'
 
+
 const Form = () => {
     const [formData, setFormData] = useState({
         fullName: '',
@@ -8,23 +9,47 @@ const Form = () => {
         phoneNumber: '',
         services: '',
         serviceDetails: '',
-        fileAttachment: ''
+        fileAttachment: []
     })
+
+    const [loading, setLoading] = useState(false)
 
     function handleChange(e) {
         setFormData({...formData, [e.target.name]: e.target.value})
     }
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault()
-        axios.post('http://localhost:5000/api/requests', formData)
+
+        const data = new FormData()
+        data.append('fullName', formData.fullName)
+        data.append('email', formData.email)
+        data.append('phoneNumber', formData.phoneNumber)
+        data.append('services', formData.services)
+        data.append('serviceDetails', formData.serviceDetails)
+        if (formData.fileAttachment.length > 0) {
+            formData.fileAttachment.forEach((file) => {
+                data.append('fileAttachment', file)
+            })
+        }
+        await axios.post('http://localhost:3000/api/request', data)
             .then(res => {
                 console.log(res.data)
                 alert('Request submitted successfully')
+                setFormData({
+                    fullName: '',
+                    email: '',
+                    phoneNumber: '',
+                    services: '',
+                    serviceDetails: '',
+                    fileAttachment: []
+                })
             })
             .catch(err => {
                 console.log(err)
                 alert('Failed to submit request')
+            }).finally(() => {
+                setLoading(false)
             })
     }
     return (
@@ -38,20 +63,37 @@ const Form = () => {
                         <label htmlFor="fullName"></label>
                         <input className="p-2 rounded-lg border w-80 border-gray-300 placeholder-gray-700 
                                     focus:outline-none focus:ring focus:border-green-400 md:w-[400px] md:p-3" 
-                                    required value={formData.fullName} onChange={handleChange} 
-                                    type="text" name="fullName" id="fullName" placeholder='Full Name' />
+                                    required
+                                    value={formData.fullName} 
+                                    onChange={handleChange} 
+                                    type="text" 
+                                    name="fullName" 
+                                    id="fullName" 
+                                    placeholder='Full Name' />
                     </div>
                     <div>
                         <label htmlFor="email"></label>
                         <input className="p-2 rounded-lg border w-80 border-gray-300 placeholder-gray-700 
                                     focus:outline-none focus:ring focus:border-green-400 md:w-[400px] md:p-3" 
-                                    required value={formData.email} type="email" name="email" id="email" placeholder='Email' />
+                                    required 
+                                    value={formData.email} 
+                                    onChange={handleChange}
+                                    type="email" 
+                                    name="email" 
+                                    id="email" 
+                                    placeholder='Email' />
                     </div>
                     <div>
                         <label htmlFor="phoneNumber"></label>
                         <input className="p-2 rounded-lg border w-80 border-gray-300 placeholder-gray-700 
                                     focus:outline-none focus:ring focus:border-green-400 md:w-[400px] md:p-3" 
-                                    required value={formData.phoneNumber} type="tel" name="phoneNumber" id="phoneNumber" placeholder='Phone Number' />
+                                    required 
+                                    value={formData.phoneNumber}
+                                    onChange={handleChange} 
+                                    type="tel" 
+                                    name="phoneNumber" 
+                                    id="phoneNumber" 
+                                    placeholder='Phone Number' />
                     </div>
                     <div>
                         <label htmlFor="services"></label>
@@ -68,25 +110,43 @@ const Form = () => {
                         </select>
                     </div>
                     <div>
-                        <label htmlFor="service-deatils"></label>
-                        <textarea className="p-2 rounded-lg border w-80 border-gray-300 placeholder-gray-700 
-                                    focus:outline-none focus:ring focus:border-green-400  h-40 md:w-[400px] resize-none" 
-                                    required value={formData.serviceDetails} name="service-deatils" id="service-deatils" placeholder='Provide deatils about the service you need'>
-                                    </textarea>
+                        <label htmlFor="serviceDetails"></label>
+                        <textarea
+                            className="p-2 rounded-lg border w-80 border-gray-300 placeholder-gray-700 
+                                    focus:outline-none focus:ring focus:border-green-400  h-40 md:w-[400px] resize-none"
+                            required
+                            value={formData.serviceDetails}
+                            onChange={handleChange}
+                            name="serviceDetails"
+                            id="serviceDetails"
+                            placeholder='Provide details about the service you need'>
+                        </textarea>
                     </div>
                     <div className="flex flex-col gap-2">
-                        <label htmlFor="file-attachment" className="font-medium">Attach an image (Optional)</label>
-                        <input type="file" value={formData.serviceDetails} name="file-attachment" id="file-attachment" 
-                                className="p-2 border border-gray-300 rounded-lg file:mr-4 file:py-2 file:px-4 
+                        <label htmlFor="fileAttachment" className="font-medium">Attach an image (Optional)</label>
+                        <input
+                            type="file"
+                            name="fileAttachment"
+                            id="fileAttachment"
+                            multiple
+                            onChange={(e) =>
+                                setFormData({ ...formData, fileAttachment: Array.from(e.target.files) })
+                            }
+                            className="p-2 border border-gray-300 rounded-lg file:mr-4 file:py-2 file:px-4 
                                             file:border-0 file:text-white file:bg-[#2ecc71] file:rounded-md 
-                                            file:font-medium hover:file:bg-[#27ae60] transition-all cursor-pointer"/>
+                                            file:font-medium hover:file:bg-[#27ae60] transition-all cursor-pointer"
+                        />
                     </div>
-                    <button className="bg-[#2ecc71] px-4 py-3 rounded-lg shadow-md text-white font-semibold hover:bg-[#27ae60]
-                                        transition-all duration-300 md:text-lg">
-                        Submit Request
+                    <button
+                        disabled={loading}
+                        className={`px-4 py-3 rounded-lg shadow-md text-white font-semibold transition-all
+                            ${loading ? "bg-gray-400 cursor-not-allowed" : "bg-[#2ecc71] hover:bg-[#27ae60]"}`}
+                    >
+                        {loading ? "Submitting..." : "Submit Request"}
                     </button>
                 </form>
             </div>
+            
         </div>
     )
 }

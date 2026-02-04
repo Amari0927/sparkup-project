@@ -8,8 +8,7 @@ const Hero = () => {
                     Lighting the Way to a <span className="animate-brighter text-[#2ecc71]">Brighter</span> Future
                 </h1>
                 <p className="text-lg md:text-xl text-gray-700 mt-4 max-w-xl mx-auto">
-                    Offering advanced CCTV surveillance systems alongside electrical and maintenance solutions, 
-                    we prioritize safety, efficiency, and customer satisfaction.
+                We offer advanced electrical and CCTV surveillance installations, along with reliable maintenance solutions. We prioritize safety, efficiency, and exceptional customer service in every project we take on.
                 </p>
                 <Link to='/form'>
                     <button 

@@ -4,12 +4,12 @@ import { FaDollarSign } from "react-icons/fa6";
 
 const Why = () => {
     return (
-        <div className="py-10 px-8 bg-[#F9F9F9]">
+        <div className="py-10 px-8 bg-[#2C3E50]">
             <div className='text-center mb-10'>
                 <h1 className='text-[#2ecc71] font-semibold uppercase text-lg tracking-wide'>
                     Why Choose Us?
                 </h1>
-                <h2 className='text-3xl font-bold text-gray-700 md:text-4xl'>
+                <h2 className='text-3xl font-bold text-white md:text-4xl'>
                     Experience Quality, Reliability & Care
                 </h2>
             </div>

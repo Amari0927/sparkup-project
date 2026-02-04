@@ -17,12 +17,12 @@ const icons = [
 
 const Services = () => {
     return (
-        <section className="py-16 px-8 bg-[#F9F9F9]">
+        <section className="py-16 px-8 bg-[#2C3E50]">
             <div className='text-center py-8'>
                 <h1 className='text-[#2ecc71] font-semibold  uppercase text-lg tracking-wide'>
                     SERVICES
                 </h1>
-                <h2 className='text-2xl font-bold text-gray-700 md:text-3xl'>
+                <h2 className='text-2xl font-bold text-white md:text-3xl'>
                     What We Offer
                 </h2>
             </div>
