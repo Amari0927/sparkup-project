@@ -8,7 +8,9 @@ dotenv.config();
 
 const upload = multer();
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://sparkup-project.vercel.app'
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -23,7 +25,7 @@ const transporter = nodemailer.createTransport({
     },
 })
 
-app.post('/api/request', upload.array('fileAttachment', 5), async (req, res) => {
+app.post('/send-email', upload.array('fileAttachment', 5), async (req, res) => {
     const formData = req.body;
     try {
         const info = await transporter.sendMail({
