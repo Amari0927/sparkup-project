@@ -37,7 +37,7 @@ const Navbar = () => {
             <div className='flex items-center text-[#2ecc71] text-xl font-bold'>
                 <NavLink
                     to="/">
-                    <img src="/src/assets/logo.jpeg" alt="" className='h-[100px] md:h-[140px]' />
+                    <img src="/assets/logo.jpeg" alt="" className='h-[100px] md:h-[140px]' />
                 </NavLink> 
                 
             </div>

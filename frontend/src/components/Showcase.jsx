@@ -17,12 +17,12 @@ const responsive =  {
 }
 
 const slides = [
-    {key:'slide1', path:'/src/assets/light-img1.jpeg', alt:'Basket Light'},
-    {key:'slide2', path:'/src/assets/camera-img.jpeg', alt:'CCTV Camera'},
-    {key:'slide3', path:'/src/assets/light-img2.jpeg', alt:'Black Light'},
-    {key:'slide4', path:'/src/assets/camera-img2.jpeg', alt:'CCTV Camera'},
-    {key:'slide5', path:'/src/assets/tree-light-img.jpeg', alt:'Tree Light'},
-    {key:'slide6', path:'/src/assets/camera-img3.jpeg', alt:'CCTV Camera'},
+    {key:'slide1', path:'/assets/light-img1.jpeg', alt:'Basket Light'},
+    {key:'slide2', path:'/assets/camera-img.jpeg', alt:'CCTV Camera'},
+    {key:'slide3', path:'/assets/light-img2.jpeg', alt:'Black Light'},
+    {key:'slide4', path:'/assets/camera-img2.jpeg', alt:'CCTV Camera'},
+    {key:'slide5', path:'/assets/tree-light-img.jpeg', alt:'Tree Light'},
+    {key:'slide6', path:'/assets/camera-img3.jpeg', alt:'CCTV Camera'},
 ]
 
 const Showcase = () => {
