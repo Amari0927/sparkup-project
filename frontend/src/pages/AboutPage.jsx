@@ -66,7 +66,7 @@ const AboutPage = () => {
 
                     <div className="relative">
                         <img
-                        src="/assets/display-pic2.jpeg"
+                        src="/assets/boss.jpeg"
                         alt="Spark Up Maintenance Team"
                         className="rounded-lg shadow-lg w-full object-cover"
                         />
