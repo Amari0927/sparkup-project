@@ -1,4 +1,3 @@
-import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import WhatsappBtn from '../components/WhatsappBtn'
@@ -65,7 +64,6 @@ const AboutPage = () => {
                             </div>
                     </div>
 
-                   
                     <div className="relative">
                         <img
                         src="/assets/display-pic2.jpeg"
