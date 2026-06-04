@@ -76,7 +76,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="mt-10 border-t border-white pt-4 text-center">
-                <p>© 2025 SparkUp Maintenance. All Rights Reserved.</p>
+                <p>© 2025 Spark Up Electrical, Cooling & Security. All Rights Reserved.</p>
             </div>
         </footer>
     );

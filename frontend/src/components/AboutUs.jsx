@@ -9,7 +9,7 @@ const AboutUs = () => {
                     About Us
                 </h1>
                 <h2 className='text-3xl font-bold text-gray-700 md:text-4xl'>
-                    SparkUp Maintenance
+                    Spark Up Electrical, Cooling & Security
                 </h2>
             </div>
                 <div className='grid md:grid-cols-2 gap-12 items-center'>
@@ -18,7 +18,7 @@ const AboutUs = () => {
                             Founded in <span className="font-bold">2021</span> by{" "}
                             <span className="font-bold">Brandon Ruck</span>,{" "}
                             <span className="text-[#2ecc71] font-semibold">
-                                Spark Up Maintenance
+                                Spark Up Electrical, Cooling & Security
                             </span>{" "}
                             is a
                             Barbadian owned electrical and maintenance business.

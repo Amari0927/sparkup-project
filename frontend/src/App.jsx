@@ -9,7 +9,8 @@ import ElectricalLearnMore from "./pages/services-learn-more/ElectricalLearnMore
 import CCTVLearnMore from "./pages/services-learn-more/CCTVLearnMore";
 import NetworkLearnMore from "./pages/services-learn-more/NetworkLearnMore";
 import GeneralLearnMore from "./pages/services-learn-more/GeneralLearnMore";
-import { ACLearnMore } from "./pages/services-learn-more/ACLearnMore";
+import  {ACLearnMore}  from "./pages/services-learn-more/ACLearnMore";
+import {ACInstallationLearnMore} from "./pages/services-learn-more/ACInstallationLearnMore";
 import PlumbingLearnMore from "./pages/services-learn-more/PlumbingLearnMore";
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
 				<Route path="services/cctv" element={<CCTVLearnMore/>}/>
 				<Route path="services/network" element={<NetworkLearnMore/>}/>
 				<Route path="services/general" element={<GeneralLearnMore/>}/>
-				<Route path="services/ac" element={<ACLearnMore/>}/>
+				<Route path="services/acInstallation" element={<ACInstallationLearnMore/>}/>
+				<Route path="services/acMaintenance" element={<ACLearnMore/>}/>
 				<Route path="services/plumbing" element={<PlumbingLearnMore/>}/>
 				<Route path="/about" element={<AboutPage/>} />
 				<Route path="/portfolio" element={<PortfolioPage/>} />

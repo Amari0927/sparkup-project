@@ -8,6 +8,9 @@ const acServices = [
     { title: 'Air Filter Cleaning & Replacement', description: 'Improve air quality and system efficiency by cleaning or replacing your air filters regularly, ensuring optimal airflow.', },
     { title: 'Coil Cleaning', description: 'Keep your system running efficiently by removing dirt and debris from the evaporator and condenser coils, preventing overheating and system strain.', },
     { title: 'Condenser Unit Inspection & Cleaning', description: 'Ensure your AC operates at peak performance by inspecting and cleaning the condenser unit, removing blockages and enhancing cooling efficiency.', },
+    { title: 'Split System Diagnostics & Repairs', description: 'Professional troubleshooting and repair of split air conditioning systems. We diagnose and resolve issues such as poor cooling, refrigerant leaks, electrical faults, water leaks, sensor malfunctions, compressor problems, unusual noises, and communication errors between indoor and outdoor units.', },
+    { title: 'Refrigerant Leak Detection & Recharging', description: 'Inspection and repair of refrigerant leaks, followed by proper system recharging to restore cooling performance and efficiency.', },
+    { title: 'Drain Line Cleaning & Maintenance', description: 'Prevent water leaks and blockages by cleaning condensate drain lines and ensuring proper drainage from the indoor unit.', },
 ]
 
 export const ACLearnMore = () => {

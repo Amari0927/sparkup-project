@@ -4,7 +4,6 @@ import ServiceCards from '../components/ServiceCards';
 import CTA from "../components/CTA"
 import { LuCctv } from "react-icons/lu";
 import { TbAirConditioning } from "react-icons/tb";
-import { MdPlumbing } from "react-icons/md";
 import { GiElectricalResistance } from "react-icons/gi";
 import { MdElectricalServices } from "react-icons/md";
 import { CgEthernet } from "react-icons/cg";
@@ -14,10 +13,10 @@ import WhatsappBtn from "../components/WhatsappBtn";
 const services = [
     { path: "/services/electrical", icon: <GiElectricalResistance size={38} />, name: "Electrical Installation", description: "Expert electrical installation services for homes and businesses, ensuring safety, efficiency, and compliance with industry standards. " },
     { path: "/services/cctv", icon: <LuCctv size={38} />, name: "CCTV Installation", description: "Secure your property with professional  CCTV installation, offering high-definition surveillance for enhanced safety and peace of mind. " },
+    { path: "/services/acInstallation", icon: <TbAirConditioning size={38} />, name: "AC  Installation", description: "Stay cool and comfortable with our professional split unit air conditioning installation services, delivering efficient cooling, reliable performance, and long-term energy savings for your home or business. " },
     { path: "/services/general", icon: <MdElectricalServices size={38} />, name: "General Maintenance", description: "General maintenance involves small-scale repairs and improvements around the home or office, offering convenience and expertise for everyday maintenance needs." },
+    { path: "/services/acMaintenance", icon: <TbAirConditioning size={38} />, name: "AC  Maintenance", description: "Keep your air conditioning system running efficiently with our expert maintenance services, reducing energy costs and breakdowns. " },
     { path: "/services/network", icon: <CgEthernet size={38}/>, name: "Network Cabling", description: "Seamless network cabling solutions for fast and efficient data connections, ensuring smooth communication and connectivity. " },
-    { path: "/services/ac", icon: <TbAirConditioning size={38} />, name: "AC  Maintenance", description: "Keep your air conditioning system running efficiently with our expert maintenance services, reducing energy costs and breakdowns. " },
-    { path: "/services/plumbing", icon: <MdPlumbing size={38} />, name: "Plumbing Maintenance", description: "From leak repairs to full system checks, our professional plumbing maintenance ensures your pipes and fixtures work flawlessly. " },
 ];
 
 

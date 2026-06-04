@@ -5,10 +5,11 @@ const Hero = () => {
         <section className="text-gray-700  text-center p-8 flex flex-col justify-center items-center md:py-16 pt-[100px]  md:pt-[140px]">
             <div>
                 <h1 className="text-4xl md:text-5xl font-extrabold text-[#2ecc71] leading-tight mb-4">
-                    Lighting the Way to a <span className="animate-brighter text-[#2ecc71]">Brighter</span> Future
+                    Precision Power. Smart Cooling.{" "}
+                    <span className="text-shine">Secure Living.</span>
                 </h1>
                 <p className="text-lg md:text-xl text-gray-700 mt-4 max-w-xl mx-auto">
-                We offer advanced electrical and CCTV surveillance installations, along with reliable maintenance solutions. We prioritize safety, efficiency, and exceptional customer service in every project we take on.
+                We specialize in advanced electrical solutions, including CCTV surveillance and air conditioning installations, supported by integrated maintenance services. With a focus on precision, safety, and efficiency, we deliver reliable results backed by exceptional customer service. 
                 </p>
                 <Link to='/form'>
                     <button 

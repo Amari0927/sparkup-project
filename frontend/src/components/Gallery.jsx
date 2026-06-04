@@ -26,8 +26,8 @@ const Gallery = () => {
             const filtered = data.filter(item => item.category === 'cctv')
             setCategory(filtered);
 
-        } else if (info === 'Maintenance' ) {
-            const filtered = data.filter(item => item.category === 'maintenance')
+        } else if (info === 'Air Conditioning' ) {
+            const filtered = data.filter(item => item.category === 'air-conditioning')
             setCategory(filtered);
         }
     }
@@ -71,7 +71,7 @@ const Gallery = () => {
             </div>
             <div>
                 <div className='flex gap-4 mb-10 '>
-                    {['Show All', 'Electrical', 'CCTV', 'Maintenance'].map((btn) => (
+                    {['Show All', 'Electrical', 'CCTV', 'Air Conditioning'].map((btn) => (
                         <button 
                             key={btn}
                             value={btn} 

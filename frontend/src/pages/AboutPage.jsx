@@ -25,33 +25,45 @@ const AboutPage = () => {
                             <p className="text-gray-700 text-lg leading-relaxed">
                             Founded in <span className="font-bold text-gray-900">2021</span> by{" "}
                             <span className="font-bold text-gray-900">Brandon Ruck</span>,{" "}
-                            <span className="text-[#2ecc71] font-semibold">Spark Up Maintenance</span> is a
+                            <span className="text-[#2ecc71] font-semibold">Spark Up Electrical, Cooling & Security</span> is a
                             Barbadian owned electrical and maintenance business. Built on{" "}
                             <span className="font-medium text-gray-900">expertise, dedication, and trust</span>,
                             we provide top-quality services to residential and commercial clients across the island.
                             </p>
 
-                            <p className="mt-6 text-gray-700 text-lg">
-                            As a <span className="font-medium text-gray-900">certified electrician</span> working
-                            towards full licensing, Brandon leads a skilled team delivering{" "}
-                            <span className="font-medium text-gray-900">tailored electrical and maintenance solutions</span>.
-                            From installing isolators, tankless electric heaters, sub-panels, and light fixtures
-                            to <span className="font-medium text-gray-900">CCTV Installation</span>, network cabling, outlet repairs, and{" "}
-                            <span className="font-medium text-gray-900">General Maintenance </span>— we ensure your home or business
-                            operates efficiently and safely.
+                            <p className="mt-6 text-gray-700 text-lg leading-relaxed">
+                                Brandon, a certified electrician progressing
+                                toward full licensing, leads a distinguished team committed to delivering exceptional electrical
+                                and maintenance solutions. With a focus on{" "}
+                                precision, reliability, and craftsmanship,
+                                every project is executed to the highest professional standard.
                             </p>
 
-                            <p className="mt-6 text-gray-700 text-lg">
-                            We also offer <span className="font-medium text-gray-900">handyman services</span>, making us the go-to choice
-                            for comprehensive maintenance solutions. Our commitment to{" "}
-                            <span className="font-medium text-gray-900">reliability, quality, and professionalism</span> has
-                            helped us build lasting relationships with our clients.
+                            <p className="mt-6 text-gray-700 text-lg leading-relaxed">
+                                Our expertise spans complete rewiring, isolator
+                                installations, tankless electric water heaters, sub-panel upgrades, and bespoke lighting solutions.
+                                We also specialize in advanced services including{" "}
+                                CCTV systems, air conditioning installations,
+                                and structured network cabling.
                             </p>
 
-                            <p className="mt-6 text-gray-700 text-lg">
-                            Whether it’s a small repair or a large installation,{" "}
-                            <span className="font-medium text-gray-900">we respect your budget and timelines</span>,
-                            ensuring every project is completed with care and expertise.
+                            <p className="mt-6 text-gray-700 text-lg leading-relaxed">
+                                We also offer integrated property maintenance services,
+                                positioning us as the go-to choice for seamless, all-in-one solutions. Our commitment to{" "}
+                                reliability, quality, and professionalism has
+                                earned us the trust of our clients and fostered long-lasting relationships built on consistent results.
+                            </p>
+
+                            <p className="mt-6 text-gray-700 text-lg leading-relaxed">
+                                Serving both residential and commercial clients, we take pride in creating{" "}
+                                safe, efficient, and seamlessly functioning environments{" "}
+                                where quality is never compromised and excellence remains the standard.
+                            </p>
+
+                            <p className="mt-6 text-gray-700 text-lg leading-relaxed">
+                                Whether it's a small repair or a large installation,{" "}
+                                we respect your budget and timelines, ensuring
+                                every project is completed with care and expertise.
                             </p>
 
                         

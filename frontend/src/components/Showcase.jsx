@@ -49,7 +49,7 @@ const Showcase = () => {
                         ({key, path, alt}) => (
                             <div key={key}
                             className='mx-4'>
-                                <img src={path} alt={alt} className="w-full h-[400px] object-cover rounded-lg shadow-lg" />
+                                <img src={path} alt={alt} className="w-full h-[400px] md:h-[600px] object-cover rounded-lg shadow-lg" />
                             </div>
                         )
                     )
