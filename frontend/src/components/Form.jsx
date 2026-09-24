@@ -105,8 +105,7 @@ const Form = () => {
                             <option value="cctv-installation">CCTV Installation</option>
                             <option value="network-cabling">Network Cabling</option>
                             <option value="general-maintenance">General Maintenance</option>
-                            <option value="ac-maintenance">AC Maintenance</option>
-                            <option value="plumbing-maintenance">Plumbing Maintenance</option>
+                            <option value="ac-installation">AC Installation</option>
                         </select>
                     </div>
                     <div>
