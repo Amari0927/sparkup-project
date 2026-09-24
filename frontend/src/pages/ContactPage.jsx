@@ -36,7 +36,7 @@ const ContactPage = () => {
                 data.append('fileAttachment', file)
             })
         }
-        await axios.post('https://sparkup-backend.onrender.com/send-email', data)
+        await axios.post('https://sparkup-project.onrender.com/send-email', data)
             .then(res => {
                 console.log(res.data)
                 alert('Request submitted successfully')
@@ -145,8 +145,7 @@ const ContactPage = () => {
                                     <option value="cctv-installation">CCTV Installation</option>
                                     <option value="network-cabling">Network Cabling</option>
                                     <option value="general-maintenance">General Maintenance</option>
-                                    <option value="ac-maintenance">AC Maintenance</option>
-                                    <option value="plumbing-maintenance">Plumbing Maintenance</option>
+                                    <option value="ac-installation">AC Installation</option>
                                 </select>
                             </div>
                             <div>

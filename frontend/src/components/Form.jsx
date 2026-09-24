@@ -32,7 +32,7 @@ const Form = () => {
                 data.append('fileAttachment', file)
             })
         }
-        await axios.post('https://sparkup-backend.onrender.com/send-email', data)
+        await axios.post('https://sparkup-project.onrender.com/send-email', data)
             .then(res => {
                 console.log(res.data)
                 alert('Request submitted successfully')

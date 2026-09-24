@@ -10,6 +10,7 @@ const upload = multer();
 const app = express();
 app.use(cors({
     origin: 'https://sparkup-project.vercel.app'
+
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
