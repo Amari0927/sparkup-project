@@ -9,8 +9,10 @@ dotenv.config();
 const upload = multer();
 const app = express();
 app.use(cors({
-    origin: 'https://sparkup-project.vercel.app'
-
+    origin: [
+        'https://sparkupmaintenance.vercel.app',
+        'http://localhost:5173'
+    ]
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
